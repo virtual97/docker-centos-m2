@@ -1,0 +1,18 @@
+# Seems, that it should be commented for multiple websites
+upstream fastcgi_backend {
+#    # use tcp connection
+#    # server  127.0.0.1:9000;
+#    # or socket
+   server   php7.0:9000;
+}
+server {
+   listen 80;
+   server_name magento2ee.cc;
+   set $MAGE_ROOT /var/www/magento2ee;
+   #custom_start
+   listen 443 ssl;
+   ssl_certificate /etc/nginx/ssl/nginx.crt;
+   ssl_certificate_key /etc/nginx/ssl/nginx.key;
+   #custom_end
+   include /var/www/magento2ee/nginx.conf.sample;
+}

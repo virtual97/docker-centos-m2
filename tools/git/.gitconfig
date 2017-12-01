@@ -1,0 +1,9 @@
+[http]
+	sslVerify = false
+[user]
+	name = Sergii Shkiria
+	email = s.shkiria@astoundcommerce.com
+[core]
+	autocrlf = input
+[push]
+	default = current

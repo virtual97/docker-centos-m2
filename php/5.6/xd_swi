@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+XD_ON=$(php -i | grep 'xdebug support => enabled' 2>&1);
+if [ "$XD_ON" ] ; 
+then
+	echo "xDebug Disabled!"
+	phpdismod xdebug
+else
+	echo "xDebug Enabled!"
+	phpenmod xdebug
+fi
+
+service php5.6-fpm restart
+
+#if [ "$XD_ON" ] ; then
+#    FIND=""
+#    REPLACE=";"
+#else
+#    FIND=";"
+#    REPLACE=""
+#fi
+#file="/etc/php5/conf.d/20-xdebug.ini"
+#if [ -f "$file" ]
+#then
+#	echo "$file found. Disabled!"
+#	mv /etc/php5/conf.d/20-xdebug.ini /etc/php5/
+#else
+#	echo "$file not found. Enabled!"
+#	mv /etc/php5/20-xdebug.ini /etc/php5/conf.d/
+#fi
+
+#/etc/init.d/apache2 restart
+#php -i | grep 'xdebug support => enabled'
+

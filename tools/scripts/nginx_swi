@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo -S docker exec -it nginx service nginx restart

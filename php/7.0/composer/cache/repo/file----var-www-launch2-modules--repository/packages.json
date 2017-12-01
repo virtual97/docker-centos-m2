@@ -1,0 +1,585 @@
+{
+    "packages": {
+        "astound\/lib-file": {
+            "0.1.0": {
+                "name": "astound\/lib-file",
+                "license": "proprietary",
+                "description": "Astound File Library",
+                "type": "magento2-module",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\File\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/lib-file",
+                    "reference": null,
+                    "shasum": null
+                },
+                "version": "0.1.0"
+            }
+        },
+        "astound\/module-base-admin-menu": {
+            "0.1.0": {
+                "name": "astound\/module-base-admin-menu",
+                "license": "proprietary",
+                "description": "Astound Base Admin Menu",
+                "type": "magento2-module",
+                "version": "0.1.0",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\BaseAdminMenu\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-base-admin-menu",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-base-entity": {
+            "0.1.1": {
+                "name": "astound\/module-base-entity",
+                "license": "proprietary",
+                "description": "Base module for work with entities (base interfaces, traits etc)",
+                "type": "magento2-module",
+                "version": "0.1.1",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\BaseEntity\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-base-entity",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-contact-us": {
+            "0.1.0": {
+                "name": "astound\/module-contact-us",
+                "license": "proprietary",
+                "description": "Astound Contact Us",
+                "type": "magento2-module",
+                "version": "0.1.0",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\ContactUs\\": ""
+                    }
+                },
+                "require": {
+                    "magento\/module-contact": "*"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-contact-us",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-cookies-acceptance-notice": {
+            "0.1.0": {
+                "name": "astound\/module-cookies-acceptance-notice",
+                "license": "proprietary",
+                "description": "Magento 2 module",
+                "require": [],
+                "type": "magento2-module",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\CookiesAcceptanceNotice\\": ""
+                    }
+                },
+                "repositories": [
+                    {
+                        "type": "composer",
+                        "url": "http:\/\/opal-packages.ecofabric.com\/"
+                    }
+                ],
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-cookies-acceptance-notice",
+                    "reference": null,
+                    "shasum": null
+                },
+                "version": "0.1.0"
+            }
+        },
+        "astound\/module-eav-creator": {
+            "0.1.2": {
+                "name": "astound\/module-eav-creator",
+                "license": "proprietary",
+                "description": "Creator for Eav Entity.",
+                "version": "0.1.2",
+                "require": {
+                    "php": "~7.0.6",
+                    "magento\/module-eav": "101.*"
+                },
+                "minimum-stability": "alpha",
+                "type": "magento2-module",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\EavCreator\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-eav-entity-creator",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-first-visit-popup": {
+            "0.1.7": {
+                "name": "astound\/module-first-visit-popup",
+                "license": "proprietary",
+                "description": "Astound First Visit Popup",
+                "type": "magento2-module",
+                "version": "0.1.7",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\FirstVisitPopup\\": ""
+                    }
+                },
+                "require": {
+                    "astound\/module-base-entity": "*",
+                    "astound\/module-base-admin-menu": "*"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-first-visit-popup",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-first-visit-popup-staging": {
+            "0.1.2": {
+                "name": "astound\/module-first-visit-popup-staging",
+                "license": "proprietary",
+                "description": "",
+                "type": "magento2-module",
+                "version": "0.1.2",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\FirstVisitPopupStaging\\": ""
+                    }
+                },
+                "require": {
+                    "astound\/module-first-visit-popup": "*"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-first-visit-popup-staging",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-google-analytics": {
+            "0.1.0": {
+                "name": "astound\/module-google-analytics",
+                "license": "proprietary",
+                "description": "Astound Google Analytics",
+                "type": "magento2-module",
+                "version": "0.1.0",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\GoogleAnalytics\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-google-analytics",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-mana-dev": {
+            "0.1.0": {
+                "name": "astound\/module-mana-dev",
+                "license": "OSL",
+                "description": "Integration of Mana filters module",
+                "type": "magento2-component",
+                "version": "0.1.0",
+                "require": {
+                    "magento\/magento-composer-installer": "*"
+                },
+                "extra": {
+                    "magento-force": "override",
+                    "map": [
+                        [
+                            "bin\/mana",
+                            "bin\/mana"
+                        ],
+                        [
+                            "app\/code\/Manadev",
+                            "app\/code\/Manadev"
+                        ]
+                    ]
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-mana-dev",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-mega-menu": {
+            "0.1.0": {
+                "name": "astound\/module-mega-menu",
+                "license": "proprietary",
+                "description": "",
+                "type": "magento2-module",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\MegaMenu\\": ""
+                    }
+                },
+                "require": {
+                    "astound\/module-base-entity": "*"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-mega-menu",
+                    "reference": null,
+                    "shasum": null
+                },
+                "version": "0.1.0"
+            }
+        },
+        "astound\/module-mega-menu-staging": {
+            "0.1.0": {
+                "name": "astound\/module-mega-menu-staging",
+                "license": "proprietary",
+                "description": "",
+                "type": "magento2-module",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\MegaMenuStaging\\": ""
+                    }
+                },
+                "require": {
+                    "astound\/module-mega-menu": "*"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-mega-menu-staging",
+                    "reference": null,
+                    "shasum": null
+                },
+                "version": "0.1.0"
+            }
+        },
+        "astound\/module-mega-nav": {
+            "0.1.0": {
+                "name": "astound\/module-mega-nav",
+                "license": "proprietary",
+                "description": "",
+                "type": "magento2-module",
+                "version": "0.1.0",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\MegaNav\\": ""
+                    }
+                },
+                "require": {
+                    "astound\/module-mana-dev": "0.1.0",
+                    "astound\/module-base-entity": "*"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-mega-nav",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-product-badge": {
+            "0.1.0": {
+                "name": "astound\/module-product-badge",
+                "license": "proprietary",
+                "description": "Magento 2 Astound Product Badge module.",
+                "require": {
+                    "magento\/module-catalog": "^102.0.0",
+                    "astound\/module-base-entity": "1.0.0",
+                    "astound\/module-proxy-attribute": "^0.1.1"
+                },
+                "type": "magento2-module",
+                "version": "0.1.0",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\ProductBadge\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-product-badge",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-proxy-attribute": {
+            "0.1.0": {
+                "name": "astound\/module-proxy-attribute",
+                "license": "proprietary",
+                "description": "Proxy attribute functionality.",
+                "require": {
+                    "php": "~7.0.6"
+                },
+                "minimum-stability": "alpha",
+                "type": "magento2-module",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\ProxyAttribute\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-proxy-attribute",
+                    "reference": null,
+                    "shasum": null
+                },
+                "version": "0.1.0"
+            }
+        },
+        "astound\/module-slider": {
+            "0.1.6": {
+                "name": "astound\/module-slider",
+                "license": "proprietary",
+                "description": "Slider module.",
+                "type": "magento2-module",
+                "version": "0.1.6",
+                "require": {
+                    "php": "~7.0.6",
+                    "astound\/module-base-entity": "*",
+                    "astound\/module-eav-creator": "*",
+                    "astound\/module-proxy-attribute": "*"
+                },
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\Slider\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-slider",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-store-locator": {
+            "0.1.0": {
+                "name": "astound\/module-store-locator",
+                "license": "proprietary",
+                "description": "Store locator module.",
+                "type": "magento2-module",
+                "version": "0.1.0",
+                "require": {
+                    "php": "~7.0.6",
+                    "astound\/module-base-entity": "*",
+                    "astound\/module-eav-creator": "*",
+                    "astound\/module-proxy-attribute": "*",
+                    "astound\/tool-admin-base-entity": "*",
+                    "astound\/lib-file": "*"
+                },
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\StoreLocator\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-store-locator",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-store-switcher": {
+            "0.1.2": {
+                "name": "astound\/module-store-switcher",
+                "description": "Store switcher module.",
+                "type": "magento2-module",
+                "version": "0.1.2",
+                "license": [
+                    "proprietary"
+                ],
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\StoreSwitcher\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-store-switcher",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-top-info-bar": {
+            "0.1.0": {
+                "name": "astound\/module-top-info-bar",
+                "license": "proprietary",
+                "description": "Astound Top Notification Bar",
+                "type": "magento2-module",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\TopInfoBar\\": ""
+                    }
+                },
+                "require": {
+                    "astound\/module-base-entity": "*",
+                    "astound\/module-base-admin-menu": "*"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-top-info-bar",
+                    "reference": null,
+                    "shasum": null
+                },
+                "version": "0.1.0"
+            }
+        },
+        "astound\/module-wysiwyg-image-fix": {
+            "0.1.0": {
+                "name": "astound\/module-wysiwyg-image-fix",
+                "description": "WYSIWYG fix for insert image url.",
+                "type": "magento2-module",
+                "license": [
+                    "proprietary"
+                ],
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\WysiwygImageFix\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-wysiwyg-image-fix",
+                    "reference": null,
+                    "shasum": null
+                },
+                "version": "0.1.0"
+            }
+        },
+        "astound\/theme-frontend-main": {
+            "0.1.13": {
+                "name": "astound\/theme-frontend-main",
+                "license": "proprietary",
+                "description": "Astound main theme.",
+                "require": {
+                    "php": "~7.0.6",
+                    "magento\/theme-frontend-luma": "100.*.*"
+                },
+                "type": "magento2-theme",
+                "version": "0.1.13",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ]
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/module-launch2-theme",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/tool-admin-base-entity": {
+            "0.1.0": {
+                "name": "astound\/tool-admin-base-entity",
+                "license": "proprietary",
+                "description": "Astound Tool Admin Base Entity",
+                "type": "magento2-module",
+                "version": "0.1.0",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\ToolAdminBaseEntity\\": ""
+                    }
+                },
+                "require": {
+                    "astound\/module-base-entity": "*"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/launch2\/modules\/tool-admin-base-entity",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        }
+    }
+}

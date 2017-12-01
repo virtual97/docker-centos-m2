@@ -1,0 +1,92 @@
+version: '2'
+services:
+    nginx:
+        image: nginx:latest
+        container_name: nginx
+        links: 
+            - php5.6
+            - php7.0
+            - php7.1
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            #- ./nginx/ssl/nginx.crt:/etc/nginx/ssl/nginx.crt
+            #- ./nginx/ssl/nginx.key:/etc/nginx/ssl/nginx.key
+            - ./nginx/ssl/nginx.crt:/etc/nginx/ssl/nginx.crt
+            - ./nginx/ssl/nginx.key:/etc/nginx/ssl/nginx.key
+            - ./nginx/logs/nginx-error.log:/var/log/nginx/error.log
+            - ./nginx/logs/nginx-access.log:/var/log/nginx/access.log
+            
+            - /home/user/docker/apps/magento2ee/:/var/www/magento2ee
+            - ./nginx/sites-enabled/magento2ee:/etc/nginx/conf.d/magento2ee.conf
+            
+        restart: always
+    db:
+     image: mysql:5.7
+     volumes:
+        - ./mysql:/var/lib/mysql
+        - ./mysql.cnf:/etc/mysql/conf.d/custom.cnf
+        #DB backups section
+        - /home/user/docker/apps/db_backups/:/var/db_backups
+     restart: always
+     container_name: mysql-5.7
+     ports:
+        - "3306:3306"
+     environment:
+     #change
+       MYSQL_ROOT_PASSWORD: q
+       MYSQL_ROOT_HOST: '%'
+    php7.0:
+        build: ./php/7.0
+        container_name: php7.0
+        restart: always
+        tty: true
+        ports: 
+            - "7070:22"
+        expose:
+            - 9000
+        volumes:
+             - ./php/7.0/custom_php.ini:/etc/php/7.0/fpm/conf.d/custom_php.ini
+             - ./php/7.0/custom_php.ini:/etc/php/7.0/cli/conf.d/custom_php.ini
+             - ./php/7.0/composer/:/root/.composer/             
+
+            #custom_start
+             - ./tools/git/.ssh/:/root/.ssh
+             - ./tools/git/.gitconfig/:/root/.gitconfig
+            
+             - /home/user/docker/apps/magento2ee/:/var/www/magento2ee
+    php7.1:
+        build: ./php/7.1
+        container_name: php7.1
+        restart: always
+        tty: true
+        ports:
+            - "7171:22"
+        expose:
+            - 9001
+        volumes:
+            - ./php/7.1/custom_php.ini:/etc/php/7.1/fpm/conf.d/custom_php.ini
+            - ./php/7.1/custom_php.ini:/etc/php/7.1/cli/conf.d/custom_php.ini
+            - ./php/7.1/composer/:/root/.composer/
+    php5.6:
+        build: ./php/5.6
+        container_name: php5.6
+        restart: always
+        tty: true
+        ports:
+            - "4444:22"
+        expose:
+            - 9005
+        volumes:
+            - ./php/5.6/custom_php.ini:/etc/php/5.6/fpm/conf.d/custom_php.ini
+            - ./php/5.6/custom_php.ini:/etc/php/5.6/cli/conf.d/custom_php.ini
+            - ./php/5.6/composer/:/root/.composer/
+
+    #custom_start
+    maildev:
+        image: djfarrelly/maildev
+        container_name: maildev
+        ports:
+            - "8282:80"
+    #custom_end

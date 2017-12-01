@@ -1,0 +1,268 @@
+{
+    "packages": {
+        "astound\/module-base-entity": {
+            "0.1.0": {
+                "name": "astound\/module-base-entity",
+                "license": "proprietary",
+                "description": "Base module for work with entities (base interfaces, traits etc)",
+                "type": "magento2-module",
+                "version": "0.1.0",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\BaseEntity\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/opal2\/modules\/module-base-entity",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-eav-entity-creator": {
+            "0.1.0-alpha": {
+                "name": "astound\/module-eav-entity-creator",
+                "license": "proprietary",
+                "description": "Creator for Eav Entity.",
+                "require": {
+                    "php": "~7.0.6",
+                    "magento\/module-eav": "100.1.*"
+                },
+                "minimum-stability": "alpha",
+                "type": "magento2-module",
+                "version": "0.1.0-alpha",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\EavCreator\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/opal2\/modules\/module-eav-entity-creator",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-first-visit-popup": {
+            "0.1.0": {
+                "name": "astound\/module-first-visit-popup",
+                "license": "proprietary",
+                "description": "Astound First Visit Popup",
+                "type": "magento2-module",
+                "version": "0.1.0",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\FirstVisitPopup\\": ""
+                    }
+                },
+                "require": {
+                    "astound\/module-base-entity": "*"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/opal2\/modules\/module-first-visit-popup",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-mana-dev": {
+            "0.1.0": {
+                "name": "astound\/module-mana-dev",
+                "license": "OSL",
+                "description": "Integration of Mana filters module",
+                "type": "magento2-component",
+                "version": "0.1.0",
+                "require": {
+                    "magento\/magento-composer-installer": "*"
+                },
+                "extra": {
+                    "magento-force": "override",
+                    "map": [
+                        [
+                            "bin\/mana",
+                            "bin\/mana"
+                        ],
+                        [
+                            "app\/code\/Manadev",
+                            "app\/code\/Manadev"
+                        ]
+                    ]
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/opal2\/modules\/module-mana-dev",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-mega-menu": {
+            "0.1.1": {
+                "name": "astound\/module-mega-menu",
+                "license": "proprietary",
+                "description": "",
+                "type": "magento2-module",
+                "version": "0.1.1",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\MegaMenu\\": ""
+                    }
+                },
+                "require": {
+                    "astound\/module-base-entity": "*"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/opal2\/modules\/module-mega-menu",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-mega-menu-staging": {
+            "0.1.0": {
+                "name": "astound\/module-mega-menu-staging",
+                "license": "proprietary",
+                "description": "",
+                "type": "magento2-module",
+                "version": "0.1.0",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\MegaMenuStaging\\": ""
+                    }
+                },
+                "require": {
+                    "astound\/module-mega-menu": "*"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/opal2\/modules\/module-mega-menu-staging",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-mega-nav": {
+            "0.1.0": {
+                "name": "astound\/module-mega-nav",
+                "license": "proprietary",
+                "description": "",
+                "type": "magento2-module",
+                "version": "0.1.0",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\MegaNav\\": ""
+                    }
+                },
+                "require": {
+                    "astound\/module-mana-dev": "0.1.0",
+                    "astound\/module-base-entity": "*"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/opal2\/modules\/module-mega-nav",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-proxy-attribute": {
+            "0.1.0": {
+                "name": "astound\/module-proxy-attribute",
+                "license": "proprietary",
+                "description": "Proxy attribute functionality.",
+                "version": "0.1.0",
+                "require": {
+                    "php": "~7.0.6",
+                    "magento\/module-eav": "100.1.*"
+                },
+                "minimum-stability": "alpha",
+                "type": "magento2-module",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\ProxyAttribute\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/opal2\/modules\/module-proxy-attribute",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-slider": {
+            "0.1.0": {
+                "name": "astound\/module-slider",
+                "license": "proprietary",
+                "description": "Slider module.",
+                "type": "magento2-module",
+                "version": "0.1.0",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\Slider\\": ""
+                    }
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/opal2\/modules\/module-slider",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        },
+        "astound\/module-top-info-bar": {
+            "0.1.0": {
+                "name": "astound\/module-top-info-bar",
+                "license": "proprietary",
+                "description": "Astound Top Notification Bar",
+                "type": "magento2-module",
+                "version": "0.1.0",
+                "autoload": {
+                    "files": [
+                        "registration.php"
+                    ],
+                    "psr-4": {
+                        "Astound\\TopInfoBar\\": ""
+                    }
+                },
+                "require": {
+                    "astound\/module-base-entity": "*"
+                },
+                "dist": {
+                    "type": "path",
+                    "url": "\/var\/www\/opal2\/modules\/module-top-info-bar",
+                    "reference": null,
+                    "shasum": null
+                }
+            }
+        }
+    }
+}
